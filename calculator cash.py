@@ -54,7 +54,7 @@ r1 = Record(amount=145, comment="Безудержный шопинг", date="02.
 r2 = Record(amount=1568, comment="Наполнение потребительской корзины", date="03.11.2022")
 r3 = Record(amount=691, comment="Катание на такси", date="04.11.2022")
 
-cash_calculator = Cash_calculator(1000)
+cash_calculator = Cash_calculator(limit=int(input("Ввод лимита денег на сутки")))
 cash_calculator.add_record(Record(amount=300, comment="Серёге за обед"))
 cash_calculator.add_record(Record(amount=200, comment="бар в Танин др", date="05.11.2022"))
 print(cash_calculator.get_today_cash_remained("usd"))
